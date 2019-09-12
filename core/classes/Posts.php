@@ -11,8 +11,7 @@ class Posts {
 	/* select * posts by user_id and join with tables brand, types */
 	public function usersPosts($id)
 	{
-		$stmt = $this->pdo->prepare("SELECT posts.id, posts.brand as postBrand, posts.model as postModel, posts.spotter, posts.images, posts.city, posts.country, posts.created_at, brand.brand, model.model,
-			users.username
+		$stmt = $this->pdo->prepare("SELECT posts.id, posts.brand as postBrand, posts.model as postModel, posts.spotter, posts.images, posts.city, posts.country, posts.created_at, brand.brand, model.model, users.username
 			FROM posts 
 			LEFT JOIN brand ON posts.brand   = brand.id 
 			LEFT JOIN model ON posts.model   = model.id

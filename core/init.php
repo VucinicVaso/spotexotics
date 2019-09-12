@@ -9,9 +9,10 @@ define('DB_NAME', 'spotexotics');
 
 /* connect to database */
 require_once "database/connection.php";
-$pdo = $db->getConnection();
+$dbInstance = Database::getInstance();
+$pdo = $dbInstance->getConnection();
 
-/* Autoload classes */	
+/* Autoload classes */
 spl_autoload_register(function($className) {
 	require_once 'classes/'.$className.'.php';
 });
@@ -20,7 +21,7 @@ session_start();
 
 /* init classes */
 $crud     = new Crud($pdo);
-$function = new Functions(); 
+$function = Functions::getInstance();
 $user     = new Users($pdo);
 $post     = new Posts($pdo);
 

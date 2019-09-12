@@ -39,7 +39,7 @@ window.onload = function() {
 		registerForm.append('confirm_password', confirm_password.value);
 
 		const sendForm = await fetch(ADDRESS + "core/ajax/register.php", {
-			method: 'post',
+			method: 'POST',
 			body: registerForm
 		}).then(response => response.json())
 		.then(data => {

@@ -7,7 +7,7 @@
 	<meta name="description" content="basic php website">
 	<meta name="keywords" content="HTML5, CSS3, JavaScript, PHP">
 	<meta name="author" content="Vaso Vucinic">	
-	<title>AUTOGESPOT CLONE</title>
+	<title>SPOTEXOTICS</title>
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">	
 	<!-- bootstrap -->

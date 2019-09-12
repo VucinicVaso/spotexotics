@@ -1,6 +1,16 @@
 <?php 
 class Functions {
 
+	private static $_instance = null;
+
+  	public static function getInstance() 
+  	{
+        if(!isset(self::$_instance)){
+            self::$_instance = new Functions();
+        }
+    	return self::$_instance;
+    }	
+
 	/* clear input */
 	public function checkInput($var) {
 		$var = htmlspecialchars($var);
@@ -90,21 +100,19 @@ class Functions {
 	/* convert the $_FILES array to the cleaner (IMHO) array (upload multiple images) */
 	function reArrayFiles(&$file_post)
 	{
-	    $file_ary = array();
+	    $file_array = array();
 	    $multiple = is_array($file_post['name']);
 
 	    $file_count = $multiple ? count($file_post['name']) : 1;
 	    $file_keys  = array_keys($file_post);
 
-	    for ($i = 0; $i < $file_count; $i++)
-	    {
-	        foreach ($file_keys as $key)
-	        {
-	            $file_ary[$i][$key] = $multiple ? $file_post[$key][$i] : $file_post[$key];
+	    for ($i = 0; $i < $file_count; $i++){
+	        foreach ($file_keys as $key){
+	            $file_array[$i][$key] = $multiple ? $file_post[$key][$i] : $file_post[$key];
 	        }
 	    }
 
-	    return $file_ary;
+	    return $file_array;
 	}
 
 }
