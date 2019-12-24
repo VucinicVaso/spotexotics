@@ -2,11 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="basic php website">
-	<meta name="keywords" content="HTML5, CSS3, JavaScript, PHP">
-	<meta name="author" content="Vaso Vucinic">	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+    <link rel="icon" href="<?php echo BASE_URL; ?>/assets/images/logo.png" type="image/gif" sizes="16x16">
 	<title>SPOTEXOTICS</title>
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">	

@@ -9,7 +9,7 @@ class Database {
 	private $user     = DB_USER;
 	private $password = DB_PASS;
 
-	protected function __construct()
+	private function __construct()
 	{
 		$dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
 
@@ -20,13 +20,15 @@ class Database {
 		}
 	}
 
-  	public static function getInstance() 
-  	{
-        if(!isset(self::$_instance)){
-            self::$_instance = new Database();
-        }
-    	return self::$_instance;
-    }
+	public static function getInstance()
+	{
+		if (self::$_instance == null){
+			self::$_instance = new Database();
+		}
+		return self::$_instance;
+	}
+
+    private function __clone() { }
 
 	public function getConnection()
   	{

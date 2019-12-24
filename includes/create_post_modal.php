@@ -18,9 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['create_post']){
 
 	$create = $crud->create("posts", array('brand' => $brand, 'model' => $model, 'spotter' => $user_id, 'images' => json_encode($data), 'city' => $city, 'country' => $country, 'views' => 0, 'total_votes' => 0, 'daily_votes' => 0));
 
-	if($create) {
-		$message = "Post created successfully!";
-	}
+	if($create) { $message = "Post created successfully!"; }
 }
 ?>
 

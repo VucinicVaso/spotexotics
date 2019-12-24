@@ -23,9 +23,9 @@
 			<div class="row">
 				<?php if(!empty($spots)) { ?>
 				<?php foreach($spots as $spot) { ?>
-				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 pt-2 pb-2">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2">
 					<div class="card">
-						<div class="card-body">
+						<div class="card-body p-0">
 							<a href="<?php echo BASE_URL; ?>/spot.php/?spot_id=<?php echo $spot->id; ?>">
 								<img src="<?php echo BASE_URL; ?>/<?php echo json_decode($spot->images)[0]; ?>" class="w-100" style="height: 200px;">
 							</a>
@@ -72,25 +72,7 @@
 		</div>
 
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-			<?php $count_posts = $post->countPosts(); ?>
-			<div class="row mt-3 mb-2 text-center">
-				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-2">
-					<a href="<?php echo BASE_URL; ?>/spots.php/?page=1" class="btn bg-dark text-white width-100" id="margin-top"><?php echo $count_posts; ?> spots</a>				
-				</div>	
-			<?php $count_posts_by_day = $post->countPostsByDay(); ?>
-				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
-					<a href="<?php echo BASE_URL; ?>/spots.php/?page=1" class="btn bg-dark text-white width-100" id="margin-top"><?php echo $count_posts_by_day; ?> spots in the last 24 hours</a>
-				</div>	
-			</div>
-			<!-- search spots form -->
-			<?php include "includes/search.php"; ?>			
-			<!-- if users loggedin show upload form -->
-			<?php if($user->loggedIn()) { ?>
-			<?php include "includes/create_post_modal.php"; ?>
-			<button class="btn btn-info w-100 mt-1 mb-3" data-toggle="modal" data-target="#newPost"><i class="fas fa-camera"></i> UPLOAD</button>
-			<?php } else {} ?>
-
-			<?php include "includes/followus.php" ?>
+			<?php include "includes/sidebar.php"; ?>			
 		</div>
 
 	</div>

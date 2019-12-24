@@ -2,10 +2,10 @@
 
 	<?php $spot = $post->spotOfTheDay(); ?>
 
-	<div class="row justify-content-center">
+	<div class="row py-5">
 		
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5 mb-5">
-			<h2 class="text-white">SPOT OF THE DAY</h2>
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 my-5">
+			<h2 class="text-white pb-2">SPOT OF THE DAY</h2>
 		<?php
 			if(empty($spot)){
 				echo "<p class='alert alert-danger text-center'>We don't have spot of the day yet. You should vote for one!</p>";
@@ -38,13 +38,8 @@
 
 		</div>
 		
-		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-5 mb-5">
-			<?php if($user->loggedIn()) { ?>
-			<?php include "includes/create_post_modal.php"; ?>
-			<button class="btn btn-info w-100 mt-1" data-toggle="modal" data-target="#newPost"><i class="fas fa-camera"></i> UPLOAD</button>
-			<?php } else {} ?>	
-
-			<?php include "includes/followus.php" ?>
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-5">
+			<?php include "includes/sidebar.php" ?>
 		</div>
 
 	</div>

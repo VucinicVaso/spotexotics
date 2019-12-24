@@ -1,7 +1,8 @@
 <?php include "includes/header.php"; ?>
 
-	<div class="row justify-content-center">
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-white mt-5 mb-5">
+	<div class="row py-5">
+		
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 text-white my-2">
 			<h3>Contact</h3>
 			<form method="POST" id="contact_form">
 				<div class="form-group" id="text-white">
@@ -23,15 +24,11 @@
 				<input type="submit" name="submit" value="Submit" class="btn btn-info">					
 			</form>
 		</div>
+
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-			<?php if($user->loggedIn()) { ?>
-			<?php include "includes/create_post_modal.php"; ?>
-			<button class="btn btn-info w-100 mt-5" data-toggle="modal" data-target="#newPost"><i class="fas fa-camera"></i> UPLOAD</button>
-			<?php } else {} ?>	
-
-			<?php include "includes/followus.php" ?>
-
+			<?php include "includes/sidebar.php"; ?>
 		</div>
+
 	</div>
 
 <?php include "includes/footer.php"; ?>

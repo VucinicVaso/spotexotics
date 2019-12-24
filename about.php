@@ -1,8 +1,8 @@
 <?php include "includes/header.php"; ?>
 
-	<div class="row justify-content-center">
-		
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-white mt-3 mb-3">
+	<div class="row py-5">
+
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 px-5 text-white">
 			<h3>About us</h3>
 			<p>SpotExotics is an international platform where car enthusiasts meet, share photo’s and get the latest updates about exotic cars. We’re proud to say SpotExotics is for the fans, by the fans.</p>
 			<h3>Spots</h3>
@@ -12,12 +12,8 @@
 		</div>
 
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-		<?php if($user->loggedIn()) { ?>
-		<?php include "includes/create_post_modal.php"; ?>
-			<button class="btn btn-info w-100 mt-2" data-toggle="modal" data-target="#newPost"><i class="fas fa-camera"></i> UPLOAD</button>
-		<?php } else {} ?>	
-
-		<?php include "includes/followus.php" ?>
+			<?php include "includes/sidebar.php"; ?>
+		</div>
 		
 	</div>
 

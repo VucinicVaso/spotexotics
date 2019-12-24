@@ -12,6 +12,7 @@
 ?>
 
 	<div class="row">
+
 		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 text-white mt-5 mb-5">
 			<h1>NEWS: <?php echo $news->title; ?></h1>
 			<small>CREATED: <?php echo $function->timeAgo($news->created_at); ?></small>
@@ -30,12 +31,7 @@
 		</div>
 		
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-5 mb-5">
-			<?php if($user->loggedIn()) { ?>
-			<?php include "includes/create_post_modal.php"; ?>
-			<button class="btn btn-info w-100 mt-1" data-toggle="modal" data-target="#newPost"><i class="fas fa-camera"></i> UPLOAD</button>
-			<?php } else {} ?>	
-
-			<?php include "includes/followus.php" ?>
+			<?php include "includes/sidebar.php" ?>
 		</div>
 
 	</div>

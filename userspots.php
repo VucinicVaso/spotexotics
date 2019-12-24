@@ -70,18 +70,21 @@
 		</div>
 
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pt-5 pb-5">
-			<?php $count_posts = $post->countPosts(); ?>
+			
 			<div class="row mt-3 mb-2 text-center">
+				<?php $count_posts = $post->countPosts(); ?>
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-2">
 					<a href="<?php echo BASE_URL; ?>/spots.php/?page=1" class="btn bg-dark text-white width-100" id="margin-top"><?php echo $count_posts; ?> spots</a>				
 				</div>	
-			<?php $count_posts_by_day = $post->countPostsByDay(); ?>
+				<?php $count_posts_by_day = $post->countPostsByDay(); ?>
 				<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
 					<a href="<?php echo BASE_URL; ?>/spots.php/?page=1" class="btn bg-dark text-white width-100" id="margin-top"><?php echo $count_posts_by_day; ?> spots in the last 24 hours</a>
 				</div>	
 			</div>
+			
 			<!-- search spots form -->
-			<?php include "includes/search.php"; ?>			
+			<?php include "includes/search.php"; ?>
+
 			<!-- if users loggedin show upload form -->
 			<?php if($user->loggedIn()) { ?>
 			<?php include "includes/create_post_modal.php"; ?>

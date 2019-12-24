@@ -15,7 +15,7 @@
 	?>
 
 	<div class="row">
-		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mt-5 mb-5">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mt-5 mb-5">
 			<h2 class="text-center text-white"><?php echo $spot_brand->brand." ".$spot_model->model; ?> SPOTS</h2>
 
 			<div class="row">
