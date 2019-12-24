@@ -18,12 +18,13 @@
 
 	<div class="row">
 
-		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 my-2">
 			<h2 class="text-white">PHOTO SPOTS</h2>
+	
 			<div class="row">
 				<?php if(!empty($spots)) { ?>
 				<?php foreach($spots as $spot) { ?>
-				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 py-2">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
 					<div class="card">
 						<div class="card-body p-0">
 							<a href="<?php echo BASE_URL; ?>/spot.php/?spot_id=<?php echo $spot->id; ?>">
@@ -52,7 +53,7 @@
 			</div>
 			
 			<!-- pagination -->
-			<div class="row justify-content-center mt-2 mb-2">
+			<div class="row justify-content-center my-2">
 				<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
 					<nav aria-label="Page navigation example">
 						<ul class="pagination justify-content-center">
@@ -71,7 +72,7 @@
 
 		</div>
 
-		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-2">
 			<?php include "includes/sidebar.php"; ?>			
 		</div>
 

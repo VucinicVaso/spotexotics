@@ -23,7 +23,7 @@
 			<?php foreach($search_spots as $spot) { ?>
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2 mb-2">
 					<div class="card">
-						<div class="card-body">
+						<div class="card-body p-0">
 							<a href="<?php echo BASE_URL; ?>/spot.php/?spot_id=<?php echo $spot->id; ?>">
 								<img src="<?php echo BASE_URL; ?>/<?php echo json_decode($spot->images)[0]; ?>" class="w-100" style="height: 200px;">
 							</a>
@@ -49,7 +49,9 @@
 			</div>
 		</div>
 		
-		<?php include "includes/followus.php" ?>
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-2">
+			<?php include "includes/sidebar.php"; ?>			
+		</div>
 
 	</div>
 

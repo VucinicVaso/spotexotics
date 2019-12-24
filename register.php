@@ -5,8 +5,8 @@
 
 	<div class="row justify-content-around">
 		
-		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-5 mb-5">	
-			<a href="<?php echo BASE_URL; ?>/index.php" class="text-white mt-3 mb-3"><i class="fas fa-arrow-left"></i> BACK TO THE SITE</a>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-5">	
+			<a href="<?php echo BASE_URL; ?>/index.php" class="text-white my-3"><i class="fas fa-arrow-left"></i> BACK TO THE SITE</a>
 			
 			<div class="card my-5 p-5">
 				<div class="card-body">
@@ -81,8 +81,8 @@
 
 		</div>
 
-		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-5 mb-5">
-			<div class="d-flex flex-column mt-5 mb-5">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-5">
+			<div class="d-flex flex-column my-5">
 				<p class="text-white">Have an account!</p>
 				<a href="<?php echo BASE_URL; ?>/login.php" class="btn btn-info">Login here!</a>
 			</div>
