@@ -14,11 +14,11 @@
 	}
 ?>
 	<div class="row">
-		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mt-5 mb-5">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 my-5">
 			<h2 class="text-white"><?php echo $brand->brand; ?> SPOTS</h2>
 			<div class="row">
 				<?php foreach($spots as $spot) { ?>
-				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-2">
 					<div class="card">
 						<div class="card-body p-0">
 							<a href="<?php echo BASE_URL; ?>/spot.php/?spot_id=<?php echo $spot->id; ?>">
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 
-		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-5 mb-5">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-5">
 			<!-- sidebar -->
 			<?php include "includes/sidebar.php" ?>
 		</div>

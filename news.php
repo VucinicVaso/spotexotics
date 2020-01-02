@@ -13,7 +13,7 @@
 
 	<div class="row">
 
-		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 text-white mt-5 mb-5">
+		<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 text-white my-5">
 			<h1>NEWS: <?php echo $news->title; ?></h1>
 			<small>CREATED: <?php echo $function->timeAgo($news->created_at); ?></small>
 			<?php $images = json_decode($news->images); ?>
@@ -24,13 +24,13 @@
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 					<img src="<?php echo BASE_URL; ?>/<?php echo $images[1]; ?>" class="w-100" style="height: 250px;">
 				</div>
-				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12-12">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 					<img src="<?php echo BASE_URL; ?>/<?php echo $images[2]; ?>" class="w-100" style="height: 250px;">
 				</div>
 			</div>
 		</div>
 		
-		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-5 mb-5">
+		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 my-5">
 			<?php include "includes/sidebar.php" ?>
 		</div>
 

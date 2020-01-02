@@ -8,7 +8,7 @@ class Functions {
         if(!isset(self::$_instance)){
             self::$_instance = new Functions();
         }
-    	return self::$_instance;
+        return self::$_instance;
     }	
 
 	/* clear input */
